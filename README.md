@@ -1,1 +1,120 @@
-# SatSet-Fit
+# SatSet Fit
+
+[SatSet Fit](https://satset-fit.cakrasera.com) is a modern e-commerce platform for fitness equipment, designed to provide a seamless shopping experience for users looking to enhance their home workouts.
+
+Table of Contents:
+
+- [SatSet Fit](#satset-fit)
+  - [Links](#links)
+  - [Features](#features)
+  - [UI Designs](#ui-designs)
+    - [Home Page](#home-page)
+  - [Entity Relationship Diagram (ERD)](#entity-relationship-diagram-erd)
+  - [REST API Endpoints](#rest-api-endpoints)
+    - [Product](#product)
+    - [Add New Product](#add-new-product)
+
+## Links
+
+- Website/Frontend: <https://satset-fit.cakrasera.com>
+  - Backend: <https://satset-fit-backend.cakrasera.dev>
+- Repositories:
+  - General: <https://github.com/cakrasera/satsetfit>
+  - Backend: <https://github.com/cakrasera/satsetfit-api>
+  - Frontend: <https://github.com/cakrasera/satsetfit-web>
+
+Inspirations:
+
+- <https://www.pvolve.com>
+- <https://www.trxtraining.com/>
+- <https://www.speediance.com>
+
+## Features
+
+- Home page
+  - Hero section with promotional banner and call-to-action
+  - Products catalogue with filtering and sorting options ([see example](https://www.pvolve.com/collections/equipment))
+- Product page
+  - Image
+  - SKU (stock keeping unit)
+  - Name
+  - Price (in Indonesian Rupiah)
+  - Detailed description
+  - Add to cart form: quantity input & add to cart button
+- Shopping cart page
+  - Product items to buy
+    - Image, name, price, quantity, total (price x quantity)
+    - Remove item from cart
+  - Navigation links: continue shopping, go to products catalogue
+  - Proceed to checkout
+- Checkout page
+  - Order summary
+    - List of products to purchase
+    - Grand total of all items
+  - Payment method selection (e.g., bank transfer, e-wallet)
+- Order processing
+  - Confirmation page with order details and status updates
+
+## UI Designs
+
+- Figma: <https://www.figma.com/design/YuakY42L50ZxmpKhSU0Dzu/SatSet-Fit?t=Wpj3PZr2GdZa7WLb-1>
+
+### Home Page
+
+<img alt="Home Page" src="./designs/home.jpg" width="400" />
+
+## Entity Relationship Diagram (ERD)
+
+Detailed design: [https://dbdiagram.io/d/688948d2cca18e685c55af5c](https://dbdiagram.io/d/688948d2cca18e685c55af5c)
+
+![ERD](./diagrams/erd.svg)
+
+## REST API Endpoints
+
+- Production: `https://satset-fit-backend.cakrasera.dev`
+- Local: `http://localhost:3000`
+
+| Endpoint         | HTTP     | Description                   |
+| ---------------- | -------- | ----------------------------- |
+| `/products`      | `GET`    | Get all products              |
+| `/products/:id`  | `GET`    | Get product by id             |
+| `/products/seed` | `POST`   | Seed all initial products     |
+| `/products`      | `POST`   | Add new product               |
+| `/products`      | `DELETE` | Delete all products           |
+| `/products/:id`  | `DELETE` | Delete product by id          |
+| `/products/:id`  | `PUT`    | Update product by id          |
+
+### Product
+Example response for a single product:
+
+
+```json
+{
+  "id": "abc123",
+  "name": "Panda Plush",
+  "price": 120000
+}
+```
+
+### Add New Product
+
+Request Body:
+
+```json
+{
+  "name": "Panda Plush",
+  "price": 120000,
+  "color": "white"
+}
+```
+
+Response Body:
+
+```json
+{
+  "id": "abc123",
+  "name": "Panda Plush",
+  "price": 120000,
+  "colors": ["white"]
+}
+```
