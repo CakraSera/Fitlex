@@ -1,10 +1,10 @@
-# SatSet Fit
+# Fitlex
 
-[SatSet Fit](https://satset-fit.cakrasera.com) is a modern e-commerce platform for fitness equipment, designed to provide a seamless shopping experience for users looking to enhance their home workouts.
+[Fitlex](https://fitlex.cakrasera.com) is a modern e-commerce platform for fitness equipment, designed to provide a seamless shopping experience for users looking to enhance their home workouts.
 
 Table of Contents:
 
-- [SatSet Fit](#satset-fit)
+- [Fitlex](#fitlex)
   - [Links](#links)
   - [Features](#features)
   - [UI Designs](#ui-designs)
@@ -16,12 +16,12 @@ Table of Contents:
 
 ## Links
 
-- Website/Frontend: <https://satset-fit.cakrasera.com>
-  - Backend: <https://satset-fit-backend.cakrasera.dev>
+- Website/Frontend: <https://fitlex.cakrasera.com>
+  - Backend: <https://fitlex-backend.cakrasera.dev>
 - Repositories:
-  - General: <https://github.com/cakrasera/satsetfit>
-  - Backend: <https://github.com/cakrasera/satsetfit-api>
-  - Frontend: <https://github.com/cakrasera/satsetfit-web>
+  - General: <https://github.com/cakrasera/fitlex>
+  - Backend: <https://github.com/cakrasera/fitlex-api>
+  - Frontend: <https://github.com/cakrasera/fitlex-web>
 
 Inspirations:
 
@@ -57,7 +57,7 @@ Inspirations:
 
 ## UI Designs
 
-- Figma: <https://www.figma.com/design/YuakY42L50ZxmpKhSU0Dzu/SatSet-Fit?t=Wpj3PZr2GdZa7WLb-1>
+- Figma: <https://www.figma.com/design/YuakY42L50ZxmpKhSU0Dzu/fitlex?t=Wpj3PZr2GdZa7WLb-1>
 
 ### Home Page
 
@@ -71,7 +71,7 @@ Detailed design: [https://dbdiagram.io/d/688948d2cca18e685c55af5c](https://dbdia
 
 ## REST API Endpoints
 
-- Production: `https://satset-fit-backend.cakrasera.dev`
+- Production: `https://fitlex-backend.cakrasera.dev`
 - Local: `http://localhost:3000`
 
 | Endpoint         | HTTP     | Description                   |
