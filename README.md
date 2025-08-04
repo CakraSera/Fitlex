@@ -6,6 +6,10 @@ Table of Contents:
 
 - [Fitlex](#fitlex)
   - [Links](#links)
+  - [Architecture](#architecture)
+    - [Presentation Layer (UI)](#presentation-layer-ui)
+    - [Application Layer (Business Logic)](#application-layer-business-logic)
+    - [Data Access Layer (Database)](#data-access-layer-database)
   - [Flowchart](#flowchart)
   - [Features](#features)
   - [UI Designs](#ui-designs)
@@ -30,40 +34,64 @@ Inspirations:
 - <https://www.trxtraining.com/>
 - <https://www.speediance.com>
 
+## Architecture
+
+### Presentation Layer (UI)
+
+- HTML
+- CSS
+  - Tailwind CSS
+  - Shadcn/ui
+- Javascript
+- Typescript
+- React
+- React Router
+- Docker
+
+### Application Layer (Business Logic)
+
+- Javascript
+- Typescript
+- Hono
+- OpenAPI
+- Zod
+- Docker
+
+### Data Access Layer (Database)
+
+- Prisma
+- PostgreSQL
+- Docker
+
 ## Flowchart
 
 ```mermaid
 graph TD
-    A[Masuk ke Website/Aplikasi] --> B{**Home Page**};
+    A[Visit Website/App] --> B{**Home Page**};
 
-    B -- Klik Banner / Kuis Cerdas --> C[Halaman Rekomendasi Paket Solusi];
-    B -- Klik Menu Katalog --> D[**Halaman Katalog Produk**];
-    B -- Klik Produk Unggulan --> E[**Halaman Detail Produk**];
+    B -- Click Banner / Promo Bundle --> C[**Bundle Detail Page**];
+    B -- Click Catalog Menu --> D[**Product Catalog Page**];
 
-    D -- Gunakan Filter & Sorting --> D;
-    D -- Pilih Produk --> E;
+    D -- Select Product / Bundle --> C;
 
-    C -- 'Paket berisi: [Alat A] + [Alat B]' --> F[**Menambahkan ke Keranjang**];
-    E -- Mengisi Kuantitas & Klik 'Tambah ke Keranjang' --> F;
+    C -- "Package includes: [Tool A] + [Tool B] & Program X" --> F[**Add to Cart**];
 
-    F --> G{**Halaman Keranjang Belanja**};
-    G -- "Lanjutkan Belanja" --> D;
-    G -- "Lanjut ke Pembayaran" --> H[**Halaman Checkout**];
-    G -- Hapus Item --> G;
+    F --> G{**Shopping Cart Page**};
+    G -- "Continue Shopping" --> D;
+    G -- "Proceed to Checkout" --> H[**Checkout Page**];
 
-    H -- Mengisi Alamat & Pilih Pengiriman --> H;
-    H -- Pilih Metode Pembayaran --> I[Proses Pembayaran];
+    H --> I[Payment Processing];
 
-    I --> J{**Halaman Konfirmasi Pesanan**};
-    J -- "Pesanan Diterima (Order ID #123)" --> K[Pengguna Menerima Email/Notifikasi];
-    K -- "Status Pesanan: Diproses" --> K;
+    I --> J{**Order Confirmation Page**};
+    J -- "Order Received (Order ID #123)" --> K[User Receives Email/Notification];
 ```
 
 ## Features
 
 - **Home page**
-  - Hero section with a promotional banner and a primary call-to-action (CTA) that leads to the **Smart Quiz** (e.g., "Confused? Find Your Program in 2 Minutes")..
-  - Featured products section, emphasizing solution-based **Bundled Packages** (e.g., "Morning Energy Pack," "Desk Warrior Pack").
+  - A hero section with a large banner highlighting the main promotional bundle (e.g., "30% Off the Desk Warrior Bundle").
+  - The primary call-to-action (CTA) is "View Bundle" or "Shop Now," leading directly to that bundle's detail page.
+  - A section showcasing a few other featured bundles.
   - Access to the full product catalog with filtering (by tool, price, workout goal) and sorting (best-sellers, latest) options. ([see example](https://www.pvolve.com/collections/equipment))
 - **Product page**
   - Product image gallery, including **short videos of the product being used in a limited space** (e.g., a small apartment room).
@@ -101,7 +129,7 @@ graph TD
 
 ## Entity Relationship Diagram (ERD)
 
-Detailed design: [https://dbdiagram.io/d/688948d2cca18e685c55af5c](https://dbdiagram.io/d/688948d2cca18e685c55af5c)
+Detailed design: [https://dbdiagram.io/d/fitlex-688948d2cca18e685c55af5c](https://dbdiagram.io/d/fitlex-688948d2cca18e685c55af5c)
 
 ![ERD](./diagrams/erd.svg)
 
