@@ -138,15 +138,14 @@ Detailed design: [https://dbdiagram.io/d/fitlex-688948d2cca18e685c55af5c](https:
 - Production: `https://fitlex-backend.cakrasera.dev`
 - Local: `http://localhost:3000`
 
-| Endpoint         | HTTP     | Description               |
-| ---------------- | -------- | ------------------------- |
-| `/products`      | `GET`    | Get all products          |
-| `/products/:id`  | `GET`    | Get product by id         |
-| `/products/seed` | `POST`   | Seed all initial products |
-| `/products`      | `POST`   | Add new product           |
-| `/products`      | `DELETE` | Delete all products       |
-| `/products/:id`  | `DELETE` | Delete product by id      |
-| `/products/:id`  | `PUT`    | Update product by id      |
+| Endpoint        | HTTP     | Description          |
+| --------------- | -------- | -------------------- |
+| `/products`     | `GET`    | Get all products     |
+| `/products/:id` | `GET`    | Get product by id    |
+| `/products`     | `POST`   | Add new product      |
+| `/products`     | `DELETE` | Delete all products  |
+| `/products/:id` | `DELETE` | Delete product by id |
+| `/products/:id` | `PUT`    | Update product by id |
 
 ### Product
 
