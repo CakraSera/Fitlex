@@ -141,7 +141,7 @@ Detailed design: [https://dbdiagram.io/d/fitlex-688948d2cca18e685c55af5c](https:
 | Endpoint             | HTTP  | Description             |
 | -------------------- | ----- | ----------------------- |
 | `/products`          | `GET` | Get all products        |
-| `/products/:slug`    | `GET` | Get product by slug     |
+| `/products/{slug}`   | `GET` | Get product by slug     |
 | `/products/featured` | `GET` | Get product by featured |
 
 | Endpoint         | HTTP   | Permission    |
